@@ -1,0 +1,57 @@
+﻿<ManagementPackFragment SchemaVersion="SM2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TypeDefinitions>
+    <EntityTypes>
+      <ClassTypes>
+        <ClassType ID="SCSM.CI.DSC" Base="System!System.ConfigItem" Accessibility="Internal" Abstract="false" Hosted="false" Singleton="false">
+          <Property ID="ID" Key="true" Type="string" AutoIncrement="true" DefaultValue="DSC{0}" />
+          <Property ID="Description" Key="false" Type="string"/>
+          <Property ID="GUID" Key="false" Type="guid"/>
+          <Property ID="Type" Key="false" Type="enum" EnumType="SCSM.CI.DSC.Type"/>
+        </ClassType>     
+      </ClassTypes>
+      <EnumerationTypes>
+        <EnumerationValue ID="SCSM.CI.DSC.Type" Accessibility="Public" />
+        <EnumerationValue Parent="SCSM.CI.DSC.Type" ID="SCSM.CI.DSC.Type.Windows" Accessibility="Public" />
+        <EnumerationValue Parent="SCSM.CI.DSC.Type" ID="SCSM.CI.DSC.Type.Linux" Accessibility="Public" />
+      </EnumerationTypes>
+    </EntityTypes>
+  </TypeDefinitions>
+  <Categories>
+    <Category ID="SCSM.CI.DSC.Category1" Target="SCSM.CI.DSC.Type" Value="Authoring!Microsoft.EnterpriseManagement.ServiceManager.UI.Authoring.EnumerationViewTasks" />
+    <Category ID="SCSM.CI.DSC.Category2" Target="SCSM.CI.DSC.Type" Value="System!VisibleToUser" />
+  </Categories>  
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="SCSM.CI.DSC">
+          <Name>SCSM PowerShell DSC Class</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="SCSM.CI.DSC" SubElementID="ID">
+          <Name>ID</Name>
+          <Description>ID</Description>
+        </DisplayString>
+        <DisplayString ElementID="SCSM.CI.DSC" SubElementID="Description">
+          <Name>Description</Name>
+          <Description>Description</Description>
+        </DisplayString>
+        <DisplayString ElementID="SCSM.CI.DSC" SubElementID="GUID">
+          <Name>GUID</Name>
+          <Description>GUID</Description>
+        </DisplayString>     
+        <DisplayString ElementID="SCSM.CI.DSC.Type">
+          <Name>DSC Type List</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="SCSM.CI.DSC.Type.Windows">
+          <Name>Windows</Name>
+          <Description>Windows Desired State Configuration</Description>
+        </DisplayString>
+        <DisplayString ElementID="SCSM.CI.DSC.Type.Linux">
+          <Name>Linux</Name>
+          <Description>Linux Desired State Configuration</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

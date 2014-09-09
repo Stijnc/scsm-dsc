@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{61037b60-10a6-45e6-9e8c-b10eae52c177}</ProjectGuid>
+    <RootNamespace>SCSM.CI.DSC</RootNamespace>
+    <Name>SCSM PowerShell DSC LIbrary</Name>
+    <ManagementPackName>SCSM.CI.DSC.library</ManagementPackName>
+    <Version>1.0.0.0</Version>
+    <MpFrameworkVersion>v7.0.2</MpFrameworkVersion>
+    <MpFrameworkProfile>SM</MpFrameworkProfile>
+    <ProductVersion>1.1.0.0</ProductVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <GenerateSealed>True</GenerateSealed>
+    <Company>Inovativ</Company>
+    <Copyright>Copyright (c) Inovativ. All rights reserved.</Copyright>
+    <DelaySigning>False</DelaySigning>
+    <AssemblyOriginatorKeyFile>C:\Users\Stijn\Documents\GitHub\scsm-dsc\scsm.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+    <DelaySigning>false</DelaySigning>
+    <Company>MyCompany</Company>
+    <Copyright>Copyright (c) MyCompany. All rights reserved.</Copyright>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <ManagementPackReference Include="Microsoft.EnterpriseManagement.ServiceManager.UI.Authoring">
+      <HintPath>C:\Program Files (x86)\Microsoft System Center 2012\Service Manager Authoring\Library\Microsoft.EnterpriseManagement.ServiceManager.UI.Authoring.mp</HintPath>
+      <Alias>Authoring</Alias>
+      <MinVersion>7.5.3079.0</MinVersion>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.EnterpriseManagement.ServiceManager.UI.Console">
+      <HintPath>C:\Program Files (x86)\Microsoft System Center 2012\Service Manager Authoring\Library\Microsoft.EnterpriseManagement.ServiceManager.UI.Console.mp</HintPath>
+      <Alias>Console</Alias>
+      <MinVersion>7.5.3079.0</MinVersion>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.SystemCenter.Library">
+      <Alias>SC</Alias>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="ServiceManager.ConfigurationManagement.Library">
+      <HintPath>C:\Program Files (x86)\Microsoft System Center 2012\Service Manager Authoring\Library\ServiceManager.ConfigurationManagement.Library.mp</HintPath>
+      <Alias>ConfigurationManagement</Alias>
+      <MinVersion>7.5.3079.0</MinVersion>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="System.Library">
+      <Alias>System</Alias>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DSC Class" />
+    <Folder Include="RelationShip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DSC Class\SCSM.CI.DSC.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RelationShip\SCSM.CI.DSC.DSCHasComputer.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VSAC\Microsoft.SystemCenter.OperationsManager.targets" />
+</Project>

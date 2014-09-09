@@ -1,0 +1,27 @@
+﻿<ManagementPackFragment SchemaVersion="SM2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TypeDefinitions>
+    <EntityTypes>
+      <RelationshipTypes>
+        <RelationshipType ID="SCSM.CI.DSC.DSCHasComputer" Base="System!System.Containment" Abstract="false" Accessibility="Internal">
+          <Source ID="Source" Type="SCSM.CI.DSC" MaxCardinality="2147483647"/>
+          <Target ID="Target" Type="System!System.Computer" MaxCardinality="2147483647"/>
+        </RelationshipType>      
+      </RelationshipTypes>
+      <TypeProjections>
+        <TypeProjection ID="SCSM.CI.DSC.TypeProjection" Accessibility="Public" Type="SCSM.CI.DSC">
+          <Component Path="$Context/Path[Relationship='SCSM.CI.DSC.DSCHasComputer']$" Alias="DSCHasComputer" />
+        </TypeProjection>
+      </TypeProjections>      
+    </EntityTypes>
+  </TypeDefinitions>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="SCSM.CI.DSC.DSCHasComputer">
+          <Name>DSC Has Computer Relationship</Name>
+          <Description></Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>
