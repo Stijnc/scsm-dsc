@@ -105,5 +105,12 @@
       <SubType>Content</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SCSM.CI.DSC.CustomForm\SCSM.CI.DSC.CustomForm.csproj">
+      <Name>SCSM.CI.DSC.CustomForm</Name>
+      <Project>{f221f710-26f4-41cf-8cd9-aec35397e917}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VSAC\Microsoft.SystemCenter.OperationsManager.targets" />
 </Project>

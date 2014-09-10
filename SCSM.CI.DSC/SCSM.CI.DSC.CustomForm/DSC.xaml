@@ -1,0 +1,24 @@
+﻿<UserControl xmlns:scwpf="http://schemas.microsoft.com/SystemCenter/Common/UI/Wpf" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:scuictrls="http://schemas.microsoft.com/SystemCenter/Common/UI/Controls" x:Class="SCSM.CI.DSC.CustomForm.DSC"
+             xmlns:smcontrols="clr-namespace:Microsoft.EnterpriseManagement.UI.WpfControls;assembly=Microsoft.EnterpriseManagement.UI.SMControls"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="600">
+    <Grid>
+        <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <TabItem Header="General" x:Name="tabItemGeneral">
+                <Grid/>
+            </TabItem>
+            <TabItem Header="Related Items" x:Name="tabItemRelItems">
+            </TabItem>
+            <TabItem Header="History" x:Name="tabItemHistory">
+                <smcontrols:HistoryTab></smcontrols:HistoryTab>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</UserControl>
