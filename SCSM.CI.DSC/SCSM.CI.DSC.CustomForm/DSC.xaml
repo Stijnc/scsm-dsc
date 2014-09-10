@@ -11,12 +11,20 @@
     <Grid>
         <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
             <TabItem Header="General" x:Name="tabItemGeneral">
-                <Grid/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition  Width="*"/>
+                        <ColumnDefinition  Width="Auto"/>
+                        
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="1"  HorizontalAlignment="Left" Height="100" Margin="5,5,5,5" VerticalAlignment="Top" Width="100" Source="Images\PowerShell_96.png" />
+                        
+                </Grid>
             </TabItem>
             <TabItem Header="Related Items" x:Name="tabItemRelItems">
             </TabItem>
             <TabItem Header="History" x:Name="tabItemHistory">
-                <smcontrols:HistoryTab></smcontrols:HistoryTab>
+                <!--<smcontrols:HistoryTab></smcontrols:HistoryTab> -->
             </TabItem>
         </TabControl>
 

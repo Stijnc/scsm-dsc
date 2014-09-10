@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -23,9 +22,9 @@ namespace SCSM.CI.DSC.CustomForm
     {
         public DSC()
         {
-            InitializeComponent();
-            _relatedItemsPane = new RelatedItemsPane(new ConfigItemRelatedItemsConfiguration());
-            tabItemRelItems.Content = _relatedItemsPane;
+            /// InitializeComponent();
+            ///_relatedItemsPane = new RelatedItemsPane(new ConfigItemRelatedItemsConfiguration());
+            ///tabItemRelItems.Content = _relatedItemsPane;
         }
     }
 }
