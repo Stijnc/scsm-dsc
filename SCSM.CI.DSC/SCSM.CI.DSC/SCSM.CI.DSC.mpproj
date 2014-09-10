@@ -101,9 +101,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Image\PowerShell_24.ico">
+    <EmbeddedResource Include="Image\PowerShell_24.ico">
       <SubType>Content</SubType>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VSAC\Microsoft.SystemCenter.OperationsManager.targets" />
 </Project>
