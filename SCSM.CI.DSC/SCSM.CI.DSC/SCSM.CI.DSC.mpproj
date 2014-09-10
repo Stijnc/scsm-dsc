@@ -46,6 +46,12 @@
       <Alias>SC</Alias>
       <PackageToBundle>False</PackageToBundle>
     </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.Windows.Library">
+      <HintPath>C:\Program Files (x86)\Microsoft System Center 2012\Service Manager Authoring\Library\Microsoft.Windows.Library.mp</HintPath>
+      <Alias>Windows</Alias>
+      <MinVersion>7.5.8501.0</MinVersion>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
     <ManagementPackReference Include="ServiceManager.ConfigurationManagement.Library">
       <HintPath>C:\Program Files (x86)\Microsoft System Center 2012\Service Manager Authoring\Library\ServiceManager.ConfigurationManagement.Library.mp</HintPath>
       <Alias>ConfigurationManagement</Alias>

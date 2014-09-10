@@ -20,11 +20,13 @@ namespace SCSM.CI.DSC.CustomForm
     /// </summary>
     public partial class DSC : UserControl
     {
+
+        private RelatedItemsPane _relatedItemsPane;
         public DSC()
         {
-            /// InitializeComponent();
-            ///_relatedItemsPane = new RelatedItemsPane(new ConfigItemRelatedItemsConfiguration());
-            ///tabItemRelItems.Content = _relatedItemsPane;
+             InitializeComponent();
+            _relatedItemsPane = new RelatedItemsPane(new ConfigItemRelatedItemsConfiguration());
+            tabItemRelItems.Content = _relatedItemsPane;
         }
     }
 }

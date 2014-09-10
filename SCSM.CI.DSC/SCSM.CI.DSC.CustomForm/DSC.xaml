@@ -24,7 +24,7 @@
             <TabItem Header="Related Items" x:Name="tabItemRelItems">
             </TabItem>
             <TabItem Header="History" x:Name="tabItemHistory">
-                <!--<smcontrols:HistoryTab></smcontrols:HistoryTab> -->
+                <smcontrols:HistoryTab></smcontrols:HistoryTab>
             </TabItem>
         </TabControl>
 
