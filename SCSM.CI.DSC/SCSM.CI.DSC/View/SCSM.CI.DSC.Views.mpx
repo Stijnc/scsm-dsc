@@ -1,3 +1,137 @@
 ﻿<ManagementPackFragment SchemaVersion="SM2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  
+  <Categories>
+    <Category ID="Category.b81c9e81582441b1b0cf69cdf23c7402" Target="Folder.06ccaf8fed0e4323bc201e0442e4f067" Value="Console!Microsoft.EnterpriseManagement.ServiceManager.UI.Console.FolderTasks" />
+    <Category ID="Category.dcfd474a8b1d42ec83421f109c07b4b2" Target="View.5160a1751d464c3a83b3f274cba7c7b1" Value="Console!Microsoft.EnterpriseManagement.ServiceManager.UI.Console.ViewTasks" />
+    <Category ID="Category.a4a80faec1dd4d79a2a11cc7bbf401e3" Target="View.5160a1751d464c3a83b3f274cba7c7b1" Value="Authoring!Microsoft.EnterpriseManagement.ServiceManager.UI.Authoring.CreateTypeCategory" />
+  </Categories>
+  <Presentation>
+    <Views>
+      <View ID="View.5160a1751d464c3a83b3f274cba7c7b1" Accessibility="Public" Enabled="true" Target="SCSM.CI.DSC" TypeID="Console!GridViewType" Visible="true">
+        <Category>NotUsed</Category>
+        <Data>
+          <Adapters>
+            <Adapter AdapterName="dataportal:EnterpriseManagementObjectProjectionAdapter">
+              <AdapterAssembly>Microsoft.EnterpriseManagement.UI.SdkDataAccess</AdapterAssembly>
+              <AdapterType>Microsoft.EnterpriseManagement.UI.SdkDataAccess.DataAdapters.EnterpriseManagementObjectProjectionAdapter</AdapterType>
+            </Adapter>
+            <Adapter AdapterName="viewframework://Adapters/AdvancedList">
+              <AdapterAssembly>Microsoft.EnterpriseManagement.UI.ViewFramework</AdapterAssembly>
+              <AdapterType>Microsoft.EnterpriseManagement.UI.ViewFramework.AdvancedListSupportAdapter</AdapterType>
+            </Adapter>
+            <Adapter AdapterName="omsdk://Adapters/Criteria">
+              <AdapterAssembly>Microsoft.EnterpriseManagement.UI.SdkDataAccess</AdapterAssembly>
+              <AdapterType>Microsoft.EnterpriseManagement.UI.SdkDataAccess.DataAdapters.SdkCriteriaAdapter</AdapterType>
+            </Adapter>
+          </Adapters>
+          <ItemsSource>
+            <AdvancedListSupportClass DataTypeName="" AdapterName="viewframework://Adapters/AdvancedList" FullUpdateAdapter="dataportal:EnterpriseManagementObjectProjectionAdapter" DataSource="mom:ManagementGroup" FullUpdateFrequency="1" Streaming="true" IsRecurring="true" RecurrenceFrequency="{x:Static s:Int32.MaxValue}" xmlns="clr-namespace:Microsoft.EnterpriseManagement.UI.ViewFramework;assembly=Microsoft.EnterpriseManagement.UI.ViewFramework" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib">
+              <AdvancedListSupportClass.Parameters>
+                <QueryParameter Parameter="TypeProjectionId" Value="$MPElement[Name='SCSM.CI.DSC.TypeProjection']$" />
+              </AdvancedListSupportClass.Parameters>
+            </AdvancedListSupportClass>
+          </ItemsSource>
+          <Criteria>
+            <QueryCriteria Adapter="omsdk://Adapters/Criteria" xmlns="http://tempuri.org/Criteria.xsd">
+              <Criteria>
+                <FreeformCriteria>
+                  <Freeform>
+                    <Criteria xmlns="http://Microsoft.EnterpriseManagement.Core.Criteria/">
+                      <Expression>
+                        <SimpleExpression>
+                          <ValueExpressionLeft>
+                            <Property>$Context/Property[Type='System!System.ConfigItem']/ObjectStatus$</Property>
+                          </ValueExpressionLeft>
+                          <Operator>NotEqual</Operator>
+                          <ValueExpressionRight>
+                            <Value>{47101e64-237f-12c8-e3f5-ec5a665412fb}</Value>
+                          </ValueExpressionRight>
+                        </SimpleExpression>
+                      </Expression>
+                    </Criteria>
+                  </Freeform>
+                </FreeformCriteria>
+              </Criteria>
+            </QueryCriteria>
+          </Criteria>
+        </Data>
+        <Presentation>
+          <Columns>
+            <mux:ColumnCollection xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mux="http://schemas.microsoft.com/SystemCenter/Common/UI/Views/GridView" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:datebinding="clr-namespace:Microsoft.EnterpriseManagement.UI.Extensions;assembly=Microsoft.EnterpriseManagement.UI.Extensions" xmlns:data="clr-namespace:Microsoft.EnterpriseManagement.UI.Extensions;assembly=Microsoft.EnterpriseManagement.UI.Extensions" xmlns:appCommon="clr-namespace:Microsoft.EnterpriseManagement.ServiceManager.Application.Common;assembly=Microsoft.EnterpriseManagement.ServiceManager.Application.Common" xmlns:toolbox="clr-namespace:Microsoft.EnterpriseManagement.UI.WpfToolbox;assembly=Microsoft.EnterpriseManagement.UI.FormsInfra" xmlns:slaBinding="clr-namespace:Microsoft.EnterpriseManagement.ServiceManager.SLA.Common;assembly=Microsoft.EnterpriseManagement.ServiceManager.SLA.Common">
+              <mux:Column Name="Id" DisplayMemberBinding="{Binding Path=Id, Mode=OneWay}" Width="100" DisplayName="Id.528f6b25577d46ee9865bcbc34a1979d" Property="Id" DataType="s:String" />
+              <mux:Column Name="DisplayName" DisplayMemberBinding="{Binding Path=DisplayName, Mode=OneWay}" Width="100" DisplayName="DisplayName.d00733c84b1f477e9e4a0060c5d9bc4a" Property="DisplayName" DataType="s:String" />
+              <mux:Column Name="GUID" DisplayMemberBinding="{Binding Path=GUID, Mode=OneWay}" Width="100" DisplayName="GUID.1c0d2004b50442e786b88000c1fb1705" Property="GUID" DataType="s:Guid" />
+              <mux:Column Name="Type.DisplayName" DisplayMemberBinding="{Binding Path=Type.DisplayName, Mode=OneWay}" Width="100" DisplayName="Type.b1d7953d5ca14f68a170a0022bb71725" Property="Type.DisplayName" DataType="s:String" />
+              <mux:Column Name="AssetStatus.DisplayName" DisplayMemberBinding="{Binding Path=AssetStatus.DisplayName, Mode=OneWay}" Width="100" DisplayName="AssetStatus.e9309ca002564df3b53737fb50b45c5b" Property="AssetStatus.DisplayName" DataType="s:String" GroupDirection="Descending" GroupIndex="1"/>
+              <mux:Column Name="$LastModified$" DisplayMemberBinding="{Binding Path=$LastModified$, Mode=OneWay}" Width="100" DisplayName="LastModified.923e0448a9b9498faace89dda789e037" Property="$LastModified$" DataType="s:DateTime" />
+            </mux:ColumnCollection>
+          </Columns>
+          <AdditonalProperties />
+          <ViewStrings>
+            <ViewString ID="AssetStatus.e9309ca002564df3b53737fb50b45c5b">$MPElement[Name="AssetStatus.e9309ca002564df3b53737fb50b45c5b"]$</ViewString>
+            <ViewString ID="DisplayName.d00733c84b1f477e9e4a0060c5d9bc4a">$MPElement[Name="DisplayName.d00733c84b1f477e9e4a0060c5d9bc4a"]$</ViewString>
+            <ViewString ID="GUID.1c0d2004b50442e786b88000c1fb1705">$MPElement[Name="GUID.1c0d2004b50442e786b88000c1fb1705"]$</ViewString>
+            <ViewString ID="Id.528f6b25577d46ee9865bcbc34a1979d">$MPElement[Name="Id.528f6b25577d46ee9865bcbc34a1979d"]$</ViewString>
+            <ViewString ID="LastModified.923e0448a9b9498faace89dda789e037">$MPElement[Name="LastModified.923e0448a9b9498faace89dda789e037"]$</ViewString>
+            <ViewString ID="Type.b1d7953d5ca14f68a170a0022bb71725">$MPElement[Name="Type.b1d7953d5ca14f68a170a0022bb71725"]$</ViewString>
+          </ViewStrings>
+        </Presentation>
+      </View>
+    </Views>
+    <Folders>
+      <Folder ID="Folder.06ccaf8fed0e4323bc201e0442e4f067" Accessibility="Public" ParentFolder="ConfigurationManagement!ServiceManager.Console.ConfigurationManagement.ConfigItem.Root" />
+    </Folders>
+    <FolderItems>
+      <FolderItem ElementID="Console!Microsoft.EnterpriseManagement.ServiceManager.UI.Console.Task.CreateGridView" ID="FolderItem.686be166ddb244508a63da9547f69d90" Folder="Folder.06ccaf8fed0e4323bc201e0442e4f067" />
+      <FolderItem ElementID="View.5160a1751d464c3a83b3f274cba7c7b1" ID="FolderItem.d05b488cc8e849f5abf7cce1fb137f7a" Folder="Folder.06ccaf8fed0e4323bc201e0442e4f067" />
+    </FolderItems>
+    <ImageReferences>
+      <ImageReference ElementID="Folder.06ccaf8fed0e4323bc201e0442e4f067" ImageID="Console!Microsoft.EnterpriseManagement.ServiceManager.UI.Console.Image.Folder" />
+      <ImageReference ElementID="View.5160a1751d464c3a83b3f274cba7c7b1" ImageID="ConfigurationManagement!ConfigItemImage16x16" />
+    </ImageReferences>
+    <StringResources>
+      <StringResource ID="AssetStatus.e9309ca002564df3b53737fb50b45c5b" />
+      <StringResource ID="DisplayName.d00733c84b1f477e9e4a0060c5d9bc4a" />
+      <StringResource ID="GUID.1c0d2004b50442e786b88000c1fb1705" />
+      <StringResource ID="Id.528f6b25577d46ee9865bcbc34a1979d" />
+      <StringResource ID="LastModified.923e0448a9b9498faace89dda789e037" />
+      <StringResource ID="Type.b1d7953d5ca14f68a170a0022bb71725" />
+    </StringResources>
+  </Presentation>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="Folder.06ccaf8fed0e4323bc201e0442e4f067">
+          <Name>PowerShell</Name>
+        </DisplayString>
+        <DisplayString ElementID="AssetStatus.e9309ca002564df3b53737fb50b45c5b">
+          <Name>Asset Status</Name>
+          <Description>Asset status</Description>
+        </DisplayString>       
+        <DisplayString ElementID="DisplayName.d00733c84b1f477e9e4a0060c5d9bc4a">
+          <Name>Display Name</Name>
+          <Description>Display name of the object.</Description>
+        </DisplayString>
+        <DisplayString ElementID="GUID.1c0d2004b50442e786b88000c1fb1705">
+          <Name>GUID</Name>
+          <Description>GUID</Description>
+        </DisplayString>
+        <DisplayString ElementID="Id.528f6b25577d46ee9865bcbc34a1979d">
+          <Name>ID</Name>
+          <Description>ID</Description>
+        </DisplayString>
+        <DisplayString ElementID="LastModified.923e0448a9b9498faace89dda789e037">
+          <Name>Last Modified</Name>
+          <Description>Last modified</Description>
+        </DisplayString>
+        <DisplayString ElementID="Type.b1d7953d5ca14f68a170a0022bb71725">
+          <Name>Type</Name>
+          <Description />
+        </DisplayString>
+        <DisplayString ElementID="View.5160a1751d464c3a83b3f274cba7c7b1">
+          <Name>DSC</Name>
+          <Description>PowerShell Desired State Configuration</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
 </ManagementPackFragment>
