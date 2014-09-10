@@ -3,6 +3,11 @@
     <Category ID="Category.b81c9e81582441b1b0cf69cdf23c7402" Target="Folder.06ccaf8fed0e4323bc201e0442e4f067" Value="Console!Microsoft.EnterpriseManagement.ServiceManager.UI.Console.FolderTasks" />
     <Category ID="Category.dcfd474a8b1d42ec83421f109c07b4b2" Target="View.5160a1751d464c3a83b3f274cba7c7b1" Value="Console!Microsoft.EnterpriseManagement.ServiceManager.UI.Console.ViewTasks" />
     <Category ID="Category.a4a80faec1dd4d79a2a11cc7bbf401e3" Target="View.5160a1751d464c3a83b3f274cba7c7b1" Value="Authoring!Microsoft.EnterpriseManagement.ServiceManager.UI.Authoring.CreateTypeCategory" />
+    <Category ID="Category.Folder.06ccaf8fed0e4323bc201e0442e4f067x24" Target="PowerShell_24" Value="System!System.Internal.ManagementPack.Images.u32x32Icon" />
+    <Category ID="Category.Folder.06ccaf8fed0e4323bc201e0442e4f067x16" Target="PowerShell_16" Value="System!System.Internal.ManagementPack.Images.u16x16Icon" />
+    <Category ID="Category.View.5160a1751d464c3a83b3f274cba7c7b1x24" Target="PowerShell_24" Value="System!System.Internal.ManagementPack.Images.u32x32Icon" />
+    <Category ID="Category.View.5160a1751d464c3a83b3f274cba7c7b1x16" Target="PowerShell_16" Value="System!System.Internal.ManagementPack.Images.u16x16Icon" />
+    <Category ID="Category.Folder.06ccaf8fed0e4323bc201e0442e4f067x64" Target="PowerShell_64" Value="System!System.Internal.ManagementPack.Images.u32x32Icon" />
   </Categories>
   <Presentation>
     <Views>
@@ -85,8 +90,11 @@
       <FolderItem ElementID="View.5160a1751d464c3a83b3f274cba7c7b1" ID="FolderItem.d05b488cc8e849f5abf7cce1fb137f7a" Folder="Folder.06ccaf8fed0e4323bc201e0442e4f067" />
     </FolderItems>
     <ImageReferences>
-      <ImageReference ElementID="Folder.06ccaf8fed0e4323bc201e0442e4f067" ImageID="Console!Microsoft.EnterpriseManagement.ServiceManager.UI.Console.Image.Folder" />
-      <ImageReference ElementID="View.5160a1751d464c3a83b3f274cba7c7b1" ImageID="ConfigurationManagement!ConfigItemImage16x16" />
+      <ImageReference ElementID="Folder.06ccaf8fed0e4323bc201e0442e4f067" ImageID="PowerShell_16" />
+      <ImageReference ElementID="View.5160a1751d464c3a83b3f274cba7c7b1" ImageID="PowerShell_16" />
+      <ImageReference ElementID="Folder.06ccaf8fed0e4323bc201e0442e4f067" ImageID="PowerShell_24" />
+      <ImageReference ElementID="View.5160a1751d464c3a83b3f274cba7c7b1" ImageID="PowerShell_24" />
+      <ImageReference ElementID="Folder.06ccaf8fed0e4323bc201e0442e4f067" ImageID="PowerShell_64" />
     </ImageReferences>
     <StringResources>
       <StringResource ID="AssetStatus.e9309ca002564df3b53737fb50b45c5b" />
@@ -134,4 +142,9 @@
       </DisplayStrings>
     </LanguagePack>
   </LanguagePacks>
+  <Resources>
+    <Image ID="PowerShell_16" Accessibility="Public" FileName="PowerShell_16.ico" />
+    <Image ID="PowerShell_24" Accessibility="Public" FileName="PowerShell_24.ico" />
+    <Image ID="PowerShell_64" Accessibility="Public" FileName="PowerShell_64.ico" />
+  </Resources>
 </ManagementPackFragment>

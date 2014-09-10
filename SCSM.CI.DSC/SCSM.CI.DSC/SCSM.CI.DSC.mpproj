@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DSC Class" />
+    <Folder Include="Image" />
     <Folder Include="View" />
     <Folder Include="RelationShip" />
   </ItemGroup>
@@ -72,6 +73,37 @@
     <Compile Include="View\SCSM.CI.DSC.Views.mpx">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Image\PowerShell_32.ico">
+      <SubType>Content</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\PowerShell_16.ico">
+      <SubType>Content</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\PowerShell_48.ico">
+      <SubType>Content</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\PowerShell_64.ico">
+      <SubType>Content</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\PowerShell_96.ico">
+      <SubType>Content</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\PowerShell_128.ico">
+      <SubType>Content</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\PowerShell_256.ico">
+      <SubType>Content</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\PowerShell_512.ico">
+      <SubType>Content</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\PowerShell_24.ico">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VSAC\Microsoft.SystemCenter.OperationsManager.targets" />
 </Project>
