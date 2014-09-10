@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DSC Class" />
+    <Folder Include="View" />
     <Folder Include="RelationShip" />
   </ItemGroup>
   <ItemGroup>
@@ -66,6 +67,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="RelationShip\SCSM.CI.DSC.DSCHasComputer.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\SCSM.CI.DSC.Views.mpx">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

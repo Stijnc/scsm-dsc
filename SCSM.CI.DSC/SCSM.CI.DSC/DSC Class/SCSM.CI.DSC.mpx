@@ -2,7 +2,7 @@
   <TypeDefinitions>
     <EntityTypes>
       <ClassTypes>
-        <ClassType ID="SCSM.CI.DSC" Base="System!System.ConfigItem" Accessibility="Internal" Abstract="false" Hosted="false" Singleton="false">
+        <ClassType ID="SCSM.CI.DSC" Base="System!System.ConfigItem" Accessibility="Public" Abstract="false" Hosted="false" Singleton="false">
           <Property ID="ID" Key="true" Type="string" AutoIncrement="true" DefaultValue="DSC{0}" />
           <Property ID="Description" Key="false" Type="string"/>
           <Property ID="GUID" Key="false" Type="guid"/>
